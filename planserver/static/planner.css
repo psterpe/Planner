@@ -1,0 +1,177 @@
+body {
+    font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+    font-size: 62.5%;
+}
+
+input[type="text"].right {
+    float: right;
+}
+
+input[type="button"] {
+    margin: 4px 0px 4px 0px;
+}
+
+.weekCount {
+    margin: 10px 0px 10px 5px;
+    padding-bottom: 5px;
+}
+
+.left-col {
+    float: left;
+    width: 13.25%;
+    border: 1px solid;
+}
+
+.right-col {
+    float: left;
+    width: 72%;
+    margin-left: 50px;
+    border: 1px solid;
+    padding-left: 50px;
+}
+
+.gridRow {
+    float: left;
+}
+
+.gridsquare {
+    width:210px;
+    height:210px;
+    padding:0.5em;
+    margin-left:5px;
+    margin-top:5px;
+    float:left;
+}
+
+.itemContainer {
+    float: left;
+    width: 100%;
+    margin: 10px 0px 10px 5px;
+}
+
+.itemList {
+    margin: 0px 0px 0px 2px;
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid;
+    width: 204px;
+    height: auto;
+}
+
+.itemList.source {
+    width: 90%;
+}
+
+.itemList li {
+    margin: 3px 3px 3px 3px;
+    height: auto;
+    padding: 5px 0px 0px 2px;
+    background-color: #cecece;
+    font-size: 1.3em;
+}
+
+.itemlist li.placeholder {
+    font-size: 1.4em;
+    background-color: #58504a;
+    color: #ffffff;
+    padding: 1px 0px 1px 2px;
+}
+
+.item-selected {
+    border: 3px solid #000000;
+}
+
+.item-deselected {
+    border: none;
+}
+
+.item-input {
+    width: 95%;
+}
+
+.itemList li.topic {
+    background-color: #d3c4e3;
+}
+
+.itemList li.topicHead {
+    background-color: #be9de0;
+}
+
+.itemList li.holiday {
+    background-color: #F24444;
+    color: #ffffff;
+}
+
+.itemList li.holidayHead {
+    background-color: #b82934;
+    color: #ffffff;
+}
+
+.itemList li.exam {
+    background-color: #faa523;
+    color: #ffffff;
+}
+
+.itemList li.examHead {
+    background-color: #F2C074;
+}
+
+.itemList li.guest {
+    background-color: #4da6d0;
+    color: #ffffff;
+}
+
+.itemList li.guestHead {
+    background-color: #82C7E8;
+    color: #ffffff;
+}
+
+.itemList li.reading {
+    background-color: #22225e;
+    color: #ffffff;
+}
+
+.itemList li.readingHead {
+    background-color: #127fde;
+    color: #ffffff;
+}
+
+.itemList li.assignment {
+    background-color: #519e8a;
+    color: #ffffff;
+}
+
+.itemList li.assignmentHead {
+    background-color: #96d1ab;
+    color: #ffffff;
+}
+
+.planlist {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.planlist li {
+    padding: 1px 0px 1px 0px;
+}
+
+.planlist li:hover {
+    background-color: lightblue;
+}
+
+/* These styles taken from editInPlace directive at https://jsfiddle.net/joshdmiller/NDFHg/ */
+.edit-in-place span {
+  cursor: pointer;
+}
+
+.edit-in-place input {
+  display: none;
+}
+
+.edit-in-place.active span {
+  display: none;
+}
+
+.edit-in-place.active input {
+  display: inline-block;
+}

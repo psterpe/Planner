@@ -1,0 +1,18 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /$
+  static_files: static/planner.html
+  upload: static/planner.html
+
+- url: /static/CDNfiles
+  static_dir: static/CDNfiles
+
+- url: /static/(.*\.(js|css))$
+  static_files: static/\1
+  upload: static/.*\.(js|css)$
+
+- url: /.*
+  script: planner.app
