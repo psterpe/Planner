@@ -1,0 +1,29 @@
+<html ng-app="planner" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Drag 'n' Drop Semester Planner</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+      <link rel="stylesheet" href="/static/planner.css" />
+      <script src="/static/moment.min.js" type="text/javascript"></script>
+      <script src="/static/planner.js" type="text/javascript"></script>
+  </head>
+  <body ng-controller="GridController">
+    <div class="left-col">
+      <param-box></param-box>
+      <div ng-repeat="category in categories">
+	<hr />
+	<item-container>
+	  <item-adder></item-adder>
+	  <item-list></item-list>
+	</item-container>
+      </div>
+    </div>
+    <div class="right-col">
+      <div id="grid">
+	<grid-row ng-repeat="w in weeks" w="{{w}}"></grid-row>
+      </div>
+    </div>
+   </body>
+</html>
