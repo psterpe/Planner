@@ -4,7 +4,6 @@ var plannerApp = angular.module('planner', ['ui.sortable']);
 
 plannerApp.controller('GridController', ['$rootScope', '$scope', 'GridService', function($rootScope, $scope, GridService) {
     $scope.weeks = [];
-    $scope.owner = 'pete';
     $scope.firstMonday = '';
     $scope.weekCount = 16;
     $scope.planname = '';
@@ -40,7 +39,6 @@ plannerApp.controller('GridController', ['$rootScope', '$scope', 'GridService', 
 		planname: $scope.planname,
 		plankey: $scope.plankey,
 		lastplan: $scope.lastplan,
-		owner: $scope.owner
 	    }).then(function(saveResponse) {
 		$scope.lastplan = $scope.planname;
 		$scope.plankey = saveResponse.plankey;
@@ -50,10 +48,10 @@ plannerApp.controller('GridController', ['$rootScope', '$scope', 'GridService', 
     };
 
     $scope.listPlans = function() {
-	GridService.listPlans($scope.owner).then(function(planlist) {
+	GridService.listPlans().then(function(planlist) {
 	    $scope.planlist = planlist;
 	    if (planlist.length == 0) {
-		alert('No plans owned by ' + $scope.owner);
+		alert('No plans yet');
 	    }
 	});
     };
@@ -168,8 +166,8 @@ plannerApp.factory('GridService', ['$http', '$rootScope', function($http, $rootS
 	return gridLists[listId];
     };
 
-    factory.listPlans = function(owner) {
-	return $http.get('/list/' + owner).then(function(response) {
+    factory.listPlans = function() {
+	return $http.get('/list/').then(function(response) {
 	    return response.data.planlist;
 	});
     };
@@ -186,7 +184,7 @@ plannerApp.factory('GridService', ['$http', '$rootScope', function($http, $rootS
 	if (args.lastplan != args.planname) {
 	    // Save a new plan
 	    req.url = '/save';
-	    req.data = {owner: args.owner, planname: args.planname, data: payload};
+	    req.data = {planname: args.planname, data: payload};
 	}
 	else {
 	    // Name hasn't changed, so Update plan we previously loaded
@@ -455,7 +453,6 @@ plannerApp.directive('itemContainer', [function() {
 
 plannerApp.directive('paramBox', function() {
     var markup = '<div class="weekCount">\
-                    <p><span>Owner:</span><input type="text" class="right" ng-model="owner" /></p>\
                     <p><span>First Monday:</span><input type="text" class="right" id="firstMonday" ng-model="firstMonday" /></p>\
                     <p><span>Weeks:</span><input type="text" class="right" ng-model="weekCount" /></p>\
                     <input type="button" value="Update Grid" ng-click="updateGrid()" /><br/>\

@@ -22,7 +22,6 @@ This README.md is still in progress...
 The first thing you want is a calendar grid representing the dates of your course. Along the left,
 fill in:
 
-* **Owner.** Enter your name or initials
 * **First Monday.** Use the date picker to select the date of the first Monday of your course
 * **Weeks.** Enter the number of weeks your grid should contain
 
@@ -34,8 +33,31 @@ You will see a calendar-like grid that looks like this:
 
 ### Enter some topics, assignments, etc.
 
-...
+Along the left, you see color-coded areas in which you can enter Topics, Readings, Assignments,
+Exams, Guests, and Holidays (in the sense of "religious or governmental day on which there are
+no classes," not in the sense of "day on which I am not working"). To enter a Topic, for example,
+fill in the text box above the `Add topic` button, then click that button.
+
+Within an area, your entries can be dragged and dropped if you want to reorder them.
+
+### Place items in the grid and move them
+
+At any time, you can drag a Topic (or Reading, or Assignment, etc.) into the calendar grid and drop
+it on the date in any square. You have to drop items on the dark rectangle containing the date,
+not in the middle of a square. You can also drag items from one date to another. Once a square has
+multiple items in it, you can reorder them by dragging and dropping.
+
+If you have dragged an item into the grid and then are not sure about it, you can drag it
+back to the left-side area from which it came. Drop it on the color-coded heading. (Due to a
+bug, you can drop it on the wrong heading, e.g., a Topic could be dropped on the Readings
+heading.)
+
+You can delete an item by selecting it (with a click) and then clicking the `Delete selected` button
+near the top of the left side.
+
+To save a plan, fill in the **Plan name** field and click the `Save` button. To load a
+previously saved plan, click the `Load` button and select your plan from the list.
 
 ## How to Get It Running
 
-...
+# README still in progress...
