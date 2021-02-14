@@ -15,7 +15,9 @@ This README.md is still in progress...
 
 ## How to Use It
 
-![Specifying the grid](link to image)
+### Create an empty calendar grid
+
+![Specifying the grid](https://github.com/psterpe/Planner/blob/master/planner_1.png)
 
 The first thing you want is a calendar grid representing the dates of your course. Along the left,
 fill in:
@@ -28,7 +30,11 @@ Then click `Update Grid`.
 
 You will see a calendar-like grid that looks like this:
 
-![Empty grid](link to image)
+![Empty grid](https://github.com/psterpe/Planner/blob/master/planner_2.png)
+
+### Enter some topics, assignments, etc.
+
+...
 
 ## How to Get It Running
 
