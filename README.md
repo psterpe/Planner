@@ -11,11 +11,24 @@ than I did!
 
 I'm putting this in a public repo because ... I can. :-)
 
-This README.md is stil in progress...
+This README.md is still in progress...
 
 ## How to Use It
 
-...
+![Specifying the grid](link to image)
+
+The first thing you want is a calendar grid representing the dates of your course. Along the left,
+fill in:
+
+* **Owner.** Enter your name or initials
+* **First Monday.** Use the date picker to select the date of the first Monday of your course
+* **Weeks.** Enter the number of weeks your grid should contain
+
+Then click `Update Grid`.
+
+You will see a calendar-like grid that looks like this:
+
+![Empty grid](link to image)
 
 ## How to Get It Running
 
