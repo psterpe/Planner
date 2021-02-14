@@ -1,6 +1,6 @@
 var nextUid = 0;
 
-var plannerApp = angular.module('planner', []);
+var plannerApp = angular.module('planner', ['ui.sortable']);
 
 plannerApp.controller('GridController', ['$rootScope', '$scope', 'GridService', function($rootScope, $scope, GridService) {
     $scope.weeks = [];

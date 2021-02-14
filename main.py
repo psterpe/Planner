@@ -26,6 +26,11 @@ app = Flask(__name__)
 app.wsgi_app = ndb_wsgi_middleware(app.wsgi_app)
 
 
+@app.route('/')
+def root():
+    return 'OK'
+
+
 @app.route('/list/')
 def list_plans():
     return {'planlist': [{'name': p.name, 'key': p.key.urlsafe()} for p in Plan.query()]}
