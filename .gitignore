@@ -3,3 +3,4 @@ moment.js
 CDNfiles/
 plans/
 pjs-semester-planner-*.json
+__pycache__/
