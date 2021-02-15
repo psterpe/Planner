@@ -4,14 +4,10 @@ This app lets an instructor plan a semester (or term or trimester) by dragging a
 assignment and topic ideas around a calendar grid. It contains a simple backend server (Flask-based)
 that stores your plans in Google Cloud NDB.
 
-I wrote this in 2016 when I was a new college teacher. It's simplistic, but it helped me plan, and
-it also let me experiment with Angular and jQuery UI. Nowadays, you'd write this with different
-technologies. Even back than you'd have written it differently, i.e., you'd have written better code
-than I did!
-
-I'm putting this in a public repo because ... I can. :-)
-
-This README.md is still in progress...
+I'm putting this in a public repo mostly as a record of something I did from which someone might
+draw inspiration. I wrote it in 2016 when I was a new college teacher. It's simplistic, but it
+helped me plan, and it also let me experiment with Angular (the old stuff) and jQuery UI. Nowadays,
+you'd write this with different technologies.
 
 ## How to Use It
 
@@ -57,7 +53,3 @@ near the top of the left side.
 
 To save a plan, fill in the **Plan name** field and click the `Save` button. To load a
 previously saved plan, click the `Load` button and select your plan from the list.
-
-## How to Get It Running
-
-# README still in progress...
