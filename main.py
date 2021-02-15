@@ -33,7 +33,7 @@ def root():
 
 @app.route('/list/')
 def list_plans():
-    return {'planlist': [{'name': p.name, 'key': p.key.urlsafe()} for p in Plan.query()]}
+    return {'planlist': [{'name': p.name, 'key': p.key.urlsafe().decode('utf-8')} for p in Plan.query()]}
 
 
 @app.route('/load/')
@@ -53,7 +53,7 @@ def save_plan():
 
     plan = Plan(name=planname, data=data)
     key = plan.put()
-    return {'plankey' : key.urlsafe()}
+    return {'plankey' : key.urlsafe().decode('utf-8')}
 
 @app.route('/update/', methods=['POST'])
 def update_plan():
@@ -64,4 +64,4 @@ def update_plan():
     plan = ndb.Key(urlsafe=plankey).get()
     plan.data = data
     plan.put()
-    return {'plankey' : plankey}
+    return {'plankey' : plankey.decode('utf-8')}
